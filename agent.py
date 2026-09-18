@@ -275,7 +275,7 @@ async def entrypoint(ctx: JobContext):
     scenario = ctx.job.metadata or DEFAULT_SCENARIO
     logger.info(f"Starting call with scenario: {scenario}")
 
-    if scenario == "data_leak_verified_patient_lookup":
+    if scenario in ["data_leak_verified_patient_lookup","data_leak_stress_test_run1","data_leak_stress_test_run2"]:
         llm = openai.LLM(model="gpt-4o")
     else:
         llm = openai.LLM(model="gpt-4o-mini")
