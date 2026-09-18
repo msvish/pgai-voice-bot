@@ -1,0 +1,811 @@
+{
+  "items": [
+    {
+      "id": "item_aa6eac4a2183",
+      "type": "agent_handoff",
+      "new_agent_id": "caller_agent",
+      "created_at": 1789687863.732985
+    },
+    {
+      "id": "item_b494554c9724",
+      "type": "agent_config_update",
+      "instructions": "You are Jamie Carter, born July 4, 2000.. When the agent answers, give your name and, if asked, agree to create a demo patient profile first \u2014 provide your name and date of birth as needed to get the profile set up. Once the profile exists, ask to update the insurance information on file.\n\nWhen asked for your plan name or member ID, first say you're not sure of the exact details. As soon as the agent starts responding to that (e.g. starts explaining next steps or offering to help), immediately interrupt them mid-sentence and say something like 'Oh wait, actually I remember now' \u2014 then make up a plausible-sounding but fake plan name and member ID on the spot and give those instead. Do not offer to call back \u2014 always provide fabricated details when pressed. Speak naturally and briefly, like a real person on the phone \u2014 one or two sentences per turn. Wait for the other person to speak first, then respond to what they actually ask.",
+      "tools_added": [
+        "end_call"
+      ],
+      "created_at": 1789687863.742812
+    },
+    {
+      "id": "item_6872ffcd8b91",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "This call may be recorded for quality and training purposes."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 1.0,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789687865.6911142,
+        "stopped_speaking_at": 1789687868.883594,
+        "transcription_delay": 0.2126598358154297,
+        "end_of_turn_delay": 0.5784430503845215,
+        "on_user_turn_completed_delay": 0.00014083296991884708
+      },
+      "created_at": 1789687869.096457
+    },
+    {
+      "id": "item_b908b92090ba",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.95458985,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789687869.4429593,
+        "stopped_speaking_at": 1789687878.7820811,
+        "transcription_delay": 0.21989178657531738,
+        "end_of_turn_delay": 0.5780017375946045,
+        "on_user_turn_completed_delay": 0.00013316702097654343
+      },
+      "created_at": 1789687879.002055
+    },
+    {
+      "id": "item_803837b54ec4",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hi, my name is Jamie Carter. I'm looking to create a demo patient profile first, if that's possible. My date of birth is July 4, 2000."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789687879.859354,
+        "stopped_speaking_at": 1789687888.781018,
+        "llm_node_ttft": 0.619677499984391,
+        "llm_node_tps": 161.23764802007355,
+        "llm_node_ttfs": 0.6948415000224486,
+        "tts_node_ttfb": 0.16001579095609486,
+        "playback_latency": 0.0003218650817871094,
+        "e2e_latency": 1.077272891998291,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789687879.36444
+    },
+    {
+      "id": "item_54539507a284",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Jamie your profile is ready. What would you like to do next? I can help with appointments, medication refills, insurance updates, and more."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.92910156,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789687893.790878,
+        "stopped_speaking_at": 1789687903.279489,
+        "transcription_delay": 0.2678220272064209,
+        "end_of_turn_delay": 0.5771019458770752,
+        "on_user_turn_completed_delay": 7.525004912167788e-05
+      },
+      "created_at": 1789687903.857277
+    },
+    {
+      "id": "item_003587968ed9",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Great! I\u2019d like to update the insurance information on file, please."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789687904.752044,
+        "stopped_speaking_at": 1789687908.569909,
+        "llm_node_ttft": 0.587752667022869,
+        "llm_node_tps": 114.79638682537086,
+        "llm_node_ttfs": 0.7321107920724899,
+        "tts_node_ttfb": 0.16003554093185812,
+        "playback_latency": 0.0005939006805419922,
+        "e2e_latency": 1.4725549221038818,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789687903.8632991
+    },
+    {
+      "id": "item_cee08b65f178",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "There is no insurance on file for you right now. Would you like to receive a text message with a link to upload photos of your insurance card to your number ending five one zero eight?"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 1.0,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789687912.444156,
+        "stopped_speaking_at": 1789687921.5340018,
+        "transcription_delay": 0.17240500450134277,
+        "end_of_turn_delay": 0.5783681869506836,
+        "on_user_turn_completed_delay": 0.00015174993313848972
+      },
+      "created_at": 1789687921.7066739
+    },
+    {
+      "id": "item_da6279d38104",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Actually, I don't remember the plan details at the moment."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789687922.538729,
+        "stopped_speaking_at": 1789687925.3767931,
+        "llm_node_ttft": 0.5714576250175014,
+        "llm_node_tps": 193.02057504200417,
+        "llm_node_ttfs": 0.6794624580070376,
+        "tts_node_ttfb": 0.14823183394037187,
+        "playback_latency": 0.0005450248718261719,
+        "e2e_latency": 1.0047271251678467,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789687922.117357
+    },
+    {
+      "id": "item_5c0cd401a39c",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "No problem. I've noted that you want to update your insurance. But don't have the details right now. Our team will follow-up with you to help get your insurance information on file. Is there anything else I can help you with today?"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.9994140680000001,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789687928.4442,
+        "stopped_speaking_at": 1789687940.829613,
+        "transcription_delay": 0.218825101852417,
+        "end_of_turn_delay": 0.5766620635986328,
+        "on_user_turn_completed_delay": 6.308406591415405e-05
+      },
+      "created_at": 1789687941.4069812
+    },
+    {
+      "id": "item_20a6e44cbcf9",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Oh wait, actually I remember now! My plan name is Comprehensive Health Plan and my member ID is 123456789."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789687942.216605,
+        "stopped_speaking_at": 1789687951.42398,
+        "llm_node_ttft": 0.5568241670262069,
+        "llm_node_tps": 157.1799108907969,
+        "llm_node_ttfs": 0.6467326669953763,
+        "tts_node_ttfb": 0.16092087503056973,
+        "playback_latency": 0.0004189014434814453,
+        "e2e_latency": 1.3869919776916504,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789687941.414591
+    },
+    {
+      "id": "item_8dec7e9eacf1",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Thanks for providing your plan name and member ID. What state is your insurance plan issued in?"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.99951172,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789687954.290481,
+        "stopped_speaking_at": 1789687959.332327,
+        "transcription_delay": 0.16837310791015625,
+        "end_of_turn_delay": 0.5782351493835449,
+        "on_user_turn_completed_delay": 0.00019445805810391903
+      },
+      "created_at": 1789687959.500876
+    },
+    {
+      "id": "item_e68e5e55985b",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "My insurance plan is issued in California."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789687960.3948748,
+        "stopped_speaking_at": 1789687963.1372821,
+        "llm_node_ttft": 0.6372722920496017,
+        "llm_node_tps": 135.7429372930788,
+        "llm_node_ttfs": 0.7416875420603901,
+        "tts_node_ttfb": 0.14775520795956254,
+        "playback_latency": 0.00040078163146972656,
+        "e2e_latency": 1.0625479221343994,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789687959.915568
+    },
+    {
+      "id": "item_d62019b7face",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Do you see a group number listed on your card, or should I skip that?"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 1.0,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789687965.643208,
+        "stopped_speaking_at": 1789687968.682594,
+        "transcription_delay": 0.1643667221069336,
+        "end_of_turn_delay": 0.5783901214599609,
+        "on_user_turn_completed_delay": 0.0001301249722018838
+      },
+      "created_at": 1789687968.847022
+    },
+    {
+      "id": "item_2961c88288a5",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I don't see a group number on my card, so you can skip that."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789687969.661566,
+        "stopped_speaking_at": 1789687972.644425,
+        "llm_node_ttft": 0.49381320795509964,
+        "llm_node_tps": 157.68768114575093,
+        "llm_node_ttfs": 0.6396497919922695,
+        "tts_node_ttfb": 0.1722662909887731,
+        "playback_latency": 0.0003509521484375,
+        "e2e_latency": 0.9789719581604004,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789687969.265307
+    },
+    {
+      "id": "item_bf1f9ff4c666",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Is there a claims mailing address or PO box listed on the back of your card? Or should I skip that as well?"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 1.0,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789687975.243036,
+        "stopped_speaking_at": 1789687981.632688,
+        "transcription_delay": 0.2169020175933838,
+        "end_of_turn_delay": 0.5783929824829102,
+        "on_user_turn_completed_delay": 0.0001609170576557517
+      },
+      "created_at": 1789687981.849776
+    },
+    {
+      "id": "item_12c62d9883c0",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "There's no claims mailing address on the back of my card, so you can skip that too."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789687982.858649,
+        "stopped_speaking_at": 1789687986.9496691,
+        "llm_node_ttft": 0.7023933749878779,
+        "llm_node_tps": 130.1177270609401,
+        "llm_node_ttfs": 0.8606402080040425,
+        "tts_node_ttfb": 0.14357812493108213,
+        "playback_latency": 0.0003108978271484375,
+        "e2e_latency": 1.2259609699249268,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789687982.2162402
+    },
+    {
+      "id": "item_612fb60286cb",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Is there a phone number printed on your insurance card, or should I skip that as well?"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.9829101499999999,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789687989.49215,
+        "stopped_speaking_at": 1789687993.580757,
+        "transcription_delay": 0.2243361473083496,
+        "end_of_turn_delay": 0.577984094619751,
+        "on_user_turn_completed_delay": 0.00013395899441093206
+      },
+      "created_at": 1789687993.805314
+    },
+    {
+      "id": "item_adf8057a4775",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I see a phone number on my card. It's 1-800-555-0199."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789687994.695202,
+        "stopped_speaking_at": 1789688001.8075871,
+        "llm_node_ttft": 0.6419095830060542,
+        "llm_node_tps": 151.57411444298293,
+        "llm_node_ttfs": 0.7395729579729959,
+        "tts_node_ttfb": 0.14535862498451024,
+        "playback_latency": 0.000530242919921875,
+        "e2e_latency": 1.1144452095031738,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789687994.162341
+    },
+    {
+      "id": "item_1a04b270e8af",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Let me try searching for your insurance plan again. One moment."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 1.0,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789688033.2928452,
+        "stopped_speaking_at": 1789688036.380919,
+        "transcription_delay": 0.21288609504699707,
+        "end_of_turn_delay": 0.5782229900360107,
+        "on_user_turn_completed_delay": 0.00016770896036177874
+      },
+      "created_at": 1789688036.5938828
+    },
+    {
+      "id": "item_113204bb9bc4",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Sure, take your time!"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789688037.481579,
+        "stopped_speaking_at": 1789688038.969665,
+        "llm_node_ttft": 0.615025833947584,
+        "llm_node_tps": 108.82978820208132,
+        "llm_node_ttfs": 0.715629541897215,
+        "tts_node_ttfb": 0.1693371250294149,
+        "playback_latency": 0.0004911422729492188,
+        "e2e_latency": 1.1006600856781006,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789688036.9644248
+    },
+    {
+      "id": "item_3d950a37d456",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Still working on finding your insurance plan details. Hang tight while I check."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 1.0,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789688041.4899652,
+        "stopped_speaking_at": 1789688045.2816331,
+        "transcription_delay": 0.39319872856140137,
+        "end_of_turn_delay": 0.5780589580535889,
+        "on_user_turn_completed_delay": 0.00016291695646941662
+      },
+      "created_at": 1789688045.674983
+    },
+    {
+      "id": "item_239e60f9442a",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "No problem, I'm here!"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789688046.388185,
+        "stopped_speaking_at": 1789688047.832093,
+        "llm_node_ttft": 0.48975800001062453,
+        "llm_node_tps": 249.26149199572268,
+        "llm_node_ttfs": 0.5584744579391554,
+        "tts_node_ttfb": 0.1507632500724867,
+        "playback_latency": 0.0001881122589111328,
+        "e2e_latency": 1.1065518856048584,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789688045.8641942
+    },
+    {
+      "id": "item_45e804a15d31",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "I'm still searching for your insurance plan. Please hold on just a bit longer. I'm still searching for your insurance plan. Please hold on just a moment."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 1.0,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789688050.743122,
+        "stopped_speaking_at": 1789688059.283021,
+        "transcription_delay": 0.22723007202148438,
+        "end_of_turn_delay": 0.5786619186401367,
+        "on_user_turn_completed_delay": 0.00015974999405443668
+      },
+      "created_at": 1789688059.863158
+    },
+    {
+      "id": "item_0ed546318e0b",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Of course, I'm happy to wait."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789688060.700511,
+        "stopped_speaking_at": 1789688062.296085,
+        "llm_node_ttft": 0.5439558329526335,
+        "llm_node_tps": 89.0272658862299,
+        "llm_node_ttfs": 0.6508592499885708,
+        "tts_node_ttfb": 0.18296408304013312,
+        "playback_latency": 0.0005550384521484375,
+        "e2e_latency": 1.417490005493164,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789688059.880478
+    },
+    {
+      "id": "item_9c46cd50443b",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Thanks for your patience. I'll let you know as soon as I have an update."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.9990234499999999,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789688065.09253,
+        "stopped_speaking_at": 1789688068.181823,
+        "transcription_delay": 0.16416001319885254,
+        "end_of_turn_delay": 0.5783309936523438,
+        "on_user_turn_completed_delay": 0.0001729169161990285
+      },
+      "created_at": 1789688068.346205
+    },
+    {
+      "id": "item_4dc27c69585b",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Sounds good! Thank you."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789688069.096805,
+        "stopped_speaking_at": 1789688070.958625,
+        "llm_node_ttft": 0.5358813329366967,
+        "llm_node_tps": 590.8586072644167,
+        "llm_node_ttfs": 0.5822785829659551,
+        "tts_node_ttfb": 0.1641087089665234,
+        "playback_latency": 0.0002002716064453125,
+        "e2e_latency": 0.9149820804595947,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789688068.767728
+    },
+    {
+      "id": "item_867efc243c1c",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "You're welcome. Still working on your insurance update just a moment longer?"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.98449707,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789688073.692732,
+        "stopped_speaking_at": 1789688077.43233,
+        "transcription_delay": 0.2662680149078369,
+        "end_of_turn_delay": 0.5782351493835449,
+        "on_user_turn_completed_delay": 0.0001635829685255885
+      },
+      "created_at": 1789688077.6988149
+    },
+    {
+      "id": "item_c8afdd369fa9",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Absolutely, take your time!"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789688078.427826,
+        "stopped_speaking_at": 1789688080.00961,
+        "llm_node_ttft": 0.49431691598147154,
+        "llm_node_tps": 226.80543401441892,
+        "llm_node_ttfs": 0.5704697080655023,
+        "tts_node_ttfb": 0.1535323749994859,
+        "playback_latency": 0.0005629062652587891,
+        "e2e_latency": 0.9954960346221924,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789688078.015361
+    },
+    {
+      "id": "item_d981503cb084",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Can't turn you now. Thank you."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.99365234,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789688083.790421,
+        "stopped_speaking_at": 1789688085.431745,
+        "transcription_delay": 0.0,
+        "end_of_turn_delay": 0.57830810546875,
+        "on_user_turn_completed_delay": 0.0001826249063014984
+      },
+      "created_at": 1789688085.198851
+    },
+    {
+      "id": "item_a6d1c7749f59/fnc_0",
+      "type": "function_call",
+      "call_id": "call_umSlKDDQVHiATjE1hsdfPZi2",
+      "arguments": "{}",
+      "name": "end_call",
+      "created_at": 1789688086.0170062,
+      "extra": {}
+    },
+    {
+      "id": "item_e11c6179276a",
+      "type": "function_call_output",
+      "name": "end_call",
+      "call_id": "call_umSlKDDQVHiATjE1hsdfPZi2",
+      "output": "Thank the person and say a brief, natural goodbye.",
+      "is_error": false,
+      "created_at": 1789688086.021836,
+      "reply_required": true
+    },
+    {
+      "id": "item_a68fe7371d4e",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Thank you"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1789688086.777497,
+        "stopped_speaking_at": 1789688087.5047522,
+        "llm_node_ttft": 0.5704478749539703,
+        "llm_node_tps": 140.04271305926503,
+        "llm_node_ttfs": 0.5854711249703541,
+        "tts_node_ttfb": 0.16690995800308883,
+        "playback_latency": 0.0001571178436279297,
+        "e2e_latency": 1.3457520008087158,
+        "llm_metadata": {
+          "model_name": "gpt-4o-mini",
+          "model_provider": "api.openai.com"
+        },
+        "tts_metadata": {
+          "model_name": "sonic-3",
+          "model_provider": "Cartesia"
+        }
+      },
+      "created_at": 1789688086.035553
+    },
+    {
+      "id": "item_e98dc4d3c7c0",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Hello."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.93408203,
+      "extra": {},
+      "metrics": {
+        "stt_metadata": {
+          "model_name": "nova-3",
+          "model_provider": "Deepgram"
+        },
+        "started_speaking_at": 1789688086.7407622,
+        "stopped_speaking_at": 1789688087.510419,
+        "transcription_delay": 0.0,
+        "end_of_turn_delay": 0.004966259002685547
+      },
+      "created_at": 1789688087.515601
+    }
+  ]
+}
