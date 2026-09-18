@@ -21,11 +21,13 @@ async def make_call(scenario: str):
     room_name = f"pgai-{scenario}"
     identity = scenario.replace("_", "-")
 
+    # Dispatch the persona agent into the room, passing the scenario name as metadata so it knows which persona to run
     await lkapi.agent_dispatch.create_dispatch(
         api.CreateAgentDispatchRequest(agent_name=agent_name, room=room_name, metadata=scenario)
     )
 
     try:
+        # Place the actual outbound PSTN call via the Twilio SIP trunk, dialing it into the same room as the agent
         participant = await lkapi.sip.create_sip_participant(
             api.CreateSIPParticipantRequest(
                 sip_trunk_id=outbound_trunk_id,
@@ -34,7 +36,7 @@ async def make_call(scenario: str):
                 room_name=room_name,
                 participant_identity=identity,
                 participant_name=identity,
-                wait_until_answered=True,
+                wait_until_answered=True,  # block here until PGAI's line actually picks up
             )
         )
         logger.info(f"Call connected: {participant}")
@@ -45,5 +47,5 @@ async def make_call(scenario: str):
 
 
 if __name__ == "__main__":
-    scenario = sys.argv[1] if len(sys.argv) > 1 else "book_appointment"
+    scenario = sys.argv[1] if len(sys.argv) > 1 else "book_appointment"  # scenario name selects which persona agent.py runs
     asyncio.run(make_call(scenario))

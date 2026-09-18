@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from livekit.agents import Agent, AgentServer, AgentSession, JobContext, cli
 from livekit.agents.beta.tools import EndCallTool
 from livekit.plugins import cartesia, deepgram, openai, silero
+from livekit.agents import function_tool, RunContext
 
 load_dotenv()
 
@@ -247,18 +248,27 @@ SCENARIOS = {
 }
 DEFAULT_SCENARIO = "book_appointment"
 
+@function_tool
+async def end_call(ctx: RunContext):
+    """Use this tool ONLY when the conversation has reached a natural,
+    complete end. Do NOT call this when told you're being transferred or
+    connected to a representative — that is a handoff, not the end of the
+    conversation; wait until a person actually speaks to you after the
+    transfer, or the call is explicitly concluded. Only call this once the
+    other person has fully finished a complete closing statement (e.g.
+    "you're all set, have a great day") and there is a clear pause — never
+    immediately after they start a sentence that merely sounds like it
+    might be closing. If in doubt, wait one more turn before ending.
+
+    When you decide to end the call, say a brief, natural goodbye as part
+    of your response, and call this tool in that same turn. The session
+    ends automatically after this tool runs."""
+    await ctx.wait_for_playout()  # let the current goodbye finish playing
+    ctx.session.shutdown(drain=True)
+
 
 class CallerAgent(Agent):
     def __init__(self, scenario: str) -> None:
-        end_call_tool = EndCallTool(
-            extra_description=(
-                "Do NOT end the call when told you're being transferred or connected "
-                "to a representative — that is a handoff, not the end of the "
-                "conversation. Wait until a person actually speaks to you after the "
-                "transfer, or the call is explicitly concluded, before ending."
-            ),
-            end_instructions="Thank the person and say a brief, natural goodbye.",
-        )
         persona = SCENARIOS.get(scenario, SCENARIOS[DEFAULT_SCENARIO])
         super().__init__(
             instructions=(
@@ -266,7 +276,7 @@ class CallerAgent(Agent):
                 "the phone — one or two sentences per turn. Wait for the other "
                 "person to speak first, then respond to what they actually ask."
             ),
-            tools=end_call_tool.tools,
+            tools=[end_call],
         )
 
 
